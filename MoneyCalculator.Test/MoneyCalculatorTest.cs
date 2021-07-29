@@ -40,8 +40,10 @@ namespace MoneyCalculator.Test
 
                 var actual = mockMoneyCalculator.SumPerCurrency(monies);
 
-                Assert.AreEqual(expected.Count(), actual.Count());
-                Assert.IsTrue(expected.SequenceEqual(actual));
+                Assert.AreEqual(expected?.Count(), actual?.Count());
+
+                if (expected != null)
+                    Assert.IsTrue(expected.SequenceEqual(actual));
             }
             catch (ArgumentException ex)
             {
@@ -102,6 +104,7 @@ namespace MoneyCalculator.Test
 
             return new List<object[]>()
             {
+                new object[] { null, null },
                 new object[] { moneyCase1, new List <Money>()
                     { 
                         new Money() { Amount = 80, Currency = "GBP" } 
