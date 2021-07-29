@@ -9,3 +9,9 @@ Used `MS Unite test` for writing unit test. In unit test I have used `DynamicDat
 If we need additional inputs or scenarios to be tested,
  - Add additional input in `GetTestDataFor_Max_Test` method for `Max()` method.
  - Add additional input in `GetTestDataFor_SumPerCurrency_Test` method for `SumPerCurrency()` method.
+
+
+## Improvements/Extra miles
+Below improvements can be implemented if I get more time,
+ - I can build REST API to consume business logic with token based authentication for endpoints.
+ - Add logging using log4net.
