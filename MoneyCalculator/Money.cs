@@ -11,5 +11,16 @@ namespace MoneyCalculator
         public decimal Amount { get; set; }
 
         public string Currency { get; set; }
+
+        public override bool Equals(object o)
+        {
+            if (o is Money)
+            {
+                var result = o as Money;
+                return this.Amount == result.Amount && this.Currency == result.Currency;
+            }
+
+            return false;
+        }
     }
 }
